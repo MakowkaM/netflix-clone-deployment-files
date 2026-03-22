@@ -65,7 +65,7 @@ module "ec2_instance" {
   monitoring             = true
   vpc_security_group_ids = [module.sg.security_group_id]
   subnet_id              = var.subnet_id
-  user_data              = file("userdata.sh")
+  user_data              = file("./userdata.sh")
   root_block_device = [
     { volume_size = 25
       volume_type = "gp3"
